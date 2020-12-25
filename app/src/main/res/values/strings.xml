@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MeetingGoGoRiki</string>
+    <string name="null_data">Пока никто не присоединился к мероприятию</string>
+    <string name="text">Вас пригласил(а): </string>
+    <string name="text_toolbar">Вечеринка</string>
+    <string name="text_party">С Вами придут:</string>
+</resources>

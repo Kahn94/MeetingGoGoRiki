@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_party"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_meeting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_iv_meeting"
+            android:layout_alignParentTop="true"
+            tools:background="@mipmap/ic_launcher_round">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/iv_organizer"
+            android:layout_width="@dimen/standart_size_image"
+            android:layout_height="@dimen/standart_size_image"
+            android:layout_gravity="start"
+            android:layout_margin="@dimen/standart_margin"
+            android:layout_below="@+id/iv_meeting"
+            tools:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tv_name_party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="@dimen/standart_margin"
+            android:layout_below="@+id/iv_meeting"
+            android:layout_toEndOf="@+id/iv_organizer"
+            android:layout_toRightOf="@+id/iv_organizer"
+            android:textSize="@dimen/font_large"
+            android:textStyle="bold"
+            tools:text="День рождения Кроша" />
+
+        <TextView
+            android:id="@+id/tv_name_organizer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_below="@+id/tv_name_party"
+            android:layout_toEndOf="@+id/iv_organizer"
+            android:layout_toRightOf="@+id/iv_organizer"
+            android:textSize="@dimen/font_standart"
+            tools:text="Пригласил(а): Крош" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_party"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_party"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/standart_margin"
+        android:text="@string/text_party">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_party"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/null_data">
+        </TextView>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_party">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

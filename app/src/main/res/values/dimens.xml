@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_iv_meeting">250dp</dimen>
+    <dimen name="standart_size_image">48dp</dimen>
+    <dimen name="standart_margin">12dp</dimen>
+    <dimen name="small_margin">5dp</dimen>
+    
+    <dimen name="font_large">22sp</dimen>
+    <dimen name="font_standart">16sp</dimen>
+</resources>
